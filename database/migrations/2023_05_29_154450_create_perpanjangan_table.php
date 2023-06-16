@@ -11,8 +11,10 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('anggota', function (Blueprint $table) {
-            $table->id();
+        Schema::create('perpanjangan', function (Blueprint $table) {
+            $table->id('id_perpanjangan');
+            $table->foreignId('id_peminjaman')->references('id_peminjaman')->on('peminjaman')->onDelete('cascade');
+            $table->date('tanggal_perpanjangan');
             $table->timestamps();
         });
     }
@@ -22,6 +24,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('anggota');
+        Schema::dropIfExists('perpanjangan');
     }
 };
