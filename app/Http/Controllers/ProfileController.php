@@ -8,6 +8,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Redirect;
 use Illuminate\View\View;
+use App\Models\Anggota;
 
 class ProfileController extends Controller
 {
@@ -33,10 +34,29 @@ class ProfileController extends Controller
         }
 
         $request->user()->save();
+        $request->validate([
+            'nomor_anggota' => 'required',
+            'nama_anggota' => 'required',
+            'alamat' => 'required',
+            'tanggal_lahir' => 'required|date',
+            'jenis_kelamin' => 'required',
+            'nomor_telepon' => 'required',
+        ]);
 
+        $anggota = Anggota::updateOrCreate([
+            'user_id' => $request->user()->id,
+            'email' => $request->user()->email
+        ], [
+            'nomor_anggota' => $request->input('nomor_anggota'),
+            'nama_anggota' => $request->input('nama_anggota'),
+            'alamat' => $request->input('alamat'),
+            'tanggal_lahir' => $request->input('tanggal_lahir'),
+            'jenis_kelamin' => $request->input('jenis_kelamin'),
+            'nomor_telepon' => $request->input('nomor_telepon'),
+        ]
+    );
         return Redirect::route('profile.edit')->with('status', 'profile-updated');
     }
-
     /**
      * Delete the user's account.
      */

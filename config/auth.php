@@ -35,11 +35,25 @@ return [
     |
     */
 
+//    'guards' => [
+//        'web' => [
+//            'driver' => 'session',
+//            'provider' => 'users',
+//        ],
+//    ],
     'guards' => [
         'web' => [
             'driver' => 'session',
             'provider' => 'users',
         ],
+//        'member' => [
+//            'driver' => 'session',
+//            'provider' => 'members',
+//        ],
+//        'librarian' => [
+//            'driver' => 'session',
+//            'provider' => 'librarians',
+//        ],
     ],
 
     /*
@@ -69,6 +83,16 @@ return [
         //     'driver' => 'database',
         //     'table' => 'users',
         // ],
+//    ],
+//    'providers' => [
+//        'members' => [
+//            'driver' => 'eloquent',
+//            'model' => App\Models\User::class,
+//        ],
+//        'librarians' => [
+//            'driver' => 'eloquent',
+//            'model' => App\Models\Pustakawan::class,
+//        ],
     ],
 
     /*

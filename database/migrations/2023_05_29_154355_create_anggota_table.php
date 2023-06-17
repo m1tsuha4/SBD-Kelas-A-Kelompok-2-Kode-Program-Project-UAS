@@ -13,6 +13,8 @@ return new class extends Migration
     {
         Schema::create('anggota', function (Blueprint $table) {
             $table->id();
+            $table->unsignedBigInteger('user_id');
+            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
             $table->string('nomor_anggota',10);
             $table->string('nama_anggota',50);
             $table->string('alamat',100);

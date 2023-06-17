@@ -11,14 +11,17 @@ use Laravel\Sanctum\HasApiTokens;
 class User extends Authenticatable
 {
     use HasApiTokens, HasFactory, Notifiable;
-
+    public function anggota()
+    {
+        return $this->hasOne(Anggota::class);
+    }
     /**
      * The attributes that are mass assignable.
      *
      * @var array<int, string>
      */
     protected $fillable = [
-        'name',
+//         php artisan make:middleware CheckRole
         'email',
         'password',
     ];
