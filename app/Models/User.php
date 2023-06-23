@@ -15,6 +15,10 @@ class User extends Authenticatable
     {
         return $this->hasOne(Anggota::class);
     }
+    public function pustakawan()
+    {
+        return $this->hasOne(Pustakawan::class);
+    }
     /**
      * The attributes that are mass assignable.
      *

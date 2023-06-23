@@ -18,8 +18,8 @@ return new class extends Migration
             $table->date('tanggal_peminjaman');
             $table->date('tanggal_batas');
             $table->date('tanggal_pengembalian');
-            $table->string('status_pengembalian');
-            $table->foreignId('id_ptkw')->references('id_ptkw')->on('pustakawan')->onDelete('cascade');
+            $table->enum('status_pengembalian',['Belum Dikembalikan','Sudah Dikembalikan'])->default('Belum Dikembalikan');
+            $table->foreignId('id_ptkw')->references('id')->on('pustakawan')->onDelete('cascade');
             $table->timestamps();
         });
     }
