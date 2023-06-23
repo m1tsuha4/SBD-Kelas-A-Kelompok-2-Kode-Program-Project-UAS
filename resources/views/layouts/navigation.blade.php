@@ -12,8 +12,8 @@
 
                 <!-- Navigation Links -->
                 <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
-                    <x-nav-link :href="route('anggota.dashboard')" :active="request()->routeIs('dashboard')">
-                        {{ __('Dashboard') }}
+                    <x-nav-link :href="route('anggota.home')" :active="request()->routeIs('dashboard')">
+                        {{ __('Dashboard Anggota') }}
                     </x-nav-link>
                     <x-nav-link :href="route('pustakawan.dashboard')" :active="request()->routeIs('dashboard')">
                         {{ __('Dashboard Pustakawan') }}

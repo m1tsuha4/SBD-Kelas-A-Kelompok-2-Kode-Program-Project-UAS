@@ -25,7 +25,13 @@ Route::get('/', function () {
 
 Route::middleware(['auth','checkRole:anggota'])->group(function () {
     Route::get('/dashboard', [AnggotaController::class, 'dashboard'])->name('anggota.dashboard');
+    Route::get('/anggota/home', [AnggotaController::class, 'home'])->name('anggota.home');
     Route::get('/anggota/buku', [AnggotaController::class,'buku'])->name('anggota.buku');
+    //Peminjaman Buku
+    Route::get('anggota/tambah', [AnggotaController::class,'tambah'])->name('anggota.tambah');
+    Route::post('anggota/store', [AnggotaController::class,'store'])->name('anggota.store');
+    //Riwayat Peminjaman Buku
+    Route::get('anggota/detail', [AnggotaController::class,'detail'])->name('anggota.detail');
 });
 Route::middleware(['auth','checkRole:pustakawan'])->group(function () {
     Route::get('/pustakawan/dashboard', [PustakawanController::class, 'dashboard'])->name('pustakawan.dashboard');

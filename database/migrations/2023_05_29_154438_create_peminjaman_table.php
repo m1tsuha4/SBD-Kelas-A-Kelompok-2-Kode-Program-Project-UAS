@@ -17,7 +17,7 @@ return new class extends Migration
             $table->foreignId('kd_exmp')->references('kd_exmp')->on('buku')->onDelete('cascade');
             $table->date('tanggal_peminjaman');
             $table->date('tanggal_batas');
-            $table->date('tanggal_pengembalian');
+            $table->date('tanggal_pengembalian')->default(null);
             $table->enum('status_pengembalian',['Belum Dikembalikan','Sudah Dikembalikan'])->default('Belum Dikembalikan');
             $table->foreignId('id_ptkw')->references('id')->on('pustakawan')->onDelete('cascade');
             $table->timestamps();
