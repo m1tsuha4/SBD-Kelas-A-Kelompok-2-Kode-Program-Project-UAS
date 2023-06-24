@@ -27,7 +27,7 @@
 
 
     <header class="main-header">
-        <nav class="navbar navbar-static-top" role="navigation">
+        <nav class="navbar navbar-static-top" role="navigation" style="float: left; margin-left: 0;width :100%;">
             <a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button">
                 <span class="sr-only">Toggle navigation</span>
                 <!--<span style="font-weight: bold;">MENU</span>-->

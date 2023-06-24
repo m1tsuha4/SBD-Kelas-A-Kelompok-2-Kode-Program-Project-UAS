@@ -27,7 +27,7 @@
 
 
     <header class="main-header">
-        <nav class="navbar navbar-static-top" role="navigation">
+        <nav class="navbar navbar-static-top" role="navigation" style="float: left; margin-left: 0;width :100%;">
             <a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button">
                 <span class="sr-only">Toggle navigation</span>
                 <!--<span style="font-weight: bold;">MENU</span>-->
@@ -80,8 +80,8 @@
                     </h4>
                 </div>
             </div>
-            <ul class="sidebar-menu"><li class="header"><span><span>MENU UTAMA</span></span></li>
-                <li class="active"><a href="/anggota/home"><i class="fa fa-home"></i>  <span>Home</span></a></li>
+            <ul class="sidebar-menu">
+                <li><a href="/anggota/home"><i class="fa fa-home"></i>  <span>Home</span></a></li>
                 <li><a href="/anggota/buku"><i class="fa fa-archive"></i>  <span>Daftar Buku</span></a></li>
                 <li><a href="/anggota/tambah"><i class="fa fa-refresh"></i>  <span>Peminjaman Buku</span></a></li>
                 <li><a href="/anggota/detail"><i class="fa fa-history"></i>  <span>Riwayat Peminjaman Buku</span></a></li>

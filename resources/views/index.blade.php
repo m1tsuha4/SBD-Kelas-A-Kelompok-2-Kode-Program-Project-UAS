@@ -125,9 +125,10 @@ $(document).ready(function() {
 
 <nav class="navbar navbar-expand-lg navbar-dark bg-transparent">
     <a class="navbar-brand inline-flex items-center" href="index.php">
-        <img class="h-10 w-15" src="{{asset('2023061803/mandiri/images/image 2.svg')}}">        <div class="inline-flex flex-col leading-tight ml-2">
+        <img class="h-10 w-15" src="{{asset('2023061803/mandiri/images/image 2.svg')}}">
+        <div class="inline-flex flex-col leading-tight ml-2">
             <h1 class="text-lg m-0 p-0">UPT Perpustakaan Universitas Andalas</h1>
-                    </div>
+        </div>
     </a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -389,76 +390,76 @@ $(document).ready(function() {
 
 <!-- // Load modal -->
 
-<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-     aria-hidden="true">
-    <div class="modal-dialog modal-lg" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">Pilih subjek yang menarik bagi Anda</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <div class="modal-body">
-                <ul class="topic d-flex flex-wrap justify-content-center p-0">
-                    <li class="d-flex justify-content-center align-items-center m-2">
-                        <a href="index.php?callnumber=0&search=search" class="d-flex flex-column">
-                            <img src="template/default/assets/images/0-chemical.png" width="80" class="mb-3 mx-auto"/>
-                            Karya Umum                        </a>
-                    </li>
-                    <li class="d-flex justify-content-center align-items-center m-2">
-                        <a href="index.php?callnumber=1&search=search" class="d-flex flex-column">
-                            <img src="template/default/assets/images/1-memory.png" width="80" class="mb-3 mx-auto"/>
-                            Filsafat                        </a>
-                    </li>
-                    <li class="d-flex justify-content-center align-items-center m-2">
-                        <a href="index.php?callnumber=2&search=search" class="d-flex flex-column">
-                            <img src="template/default/assets/images/2-mosque.png" width="80" class="mb-3 mx-auto"/>
-                            Agama                        </a>
-                    </li>
-                    <li class="d-flex justify-content-center align-items-center m-2">
-                        <a href="index.php?callnumber=3&search=search" class="d-flex flex-column">
-                            <img src="template/default/assets/images/3-diploma.png" width="80" class="mb-3 mx-auto"/>
-                            Ilmu-ilmu Sosial                        </a>
-                    </li>
-                    <li class="d-flex justify-content-center align-items-center m-2">
-                        <a href="index.php?callnumber=4&search=search" class="d-flex flex-column">
-                            <img src="template/default/assets/images/4-translation.png" width="80" class="mb-3 mx-auto"/>
-                            Bahasa                        </a>
-                    </li>
-                    <li class="d-flex justify-content-center align-items-center m-2">
-                        <a href="index.php?callnumber=5&search=search" class="d-flex flex-column">
-                            <img src="template/default/assets/images/5-math.png" width="80" class="mb-3 mx-auto"/>
-                            Ilmu-ilmu Murni                        </a>
-                    </li>
-                    <li class="d-flex justify-content-center align-items-center m-2">
-                        <a href="index.php?callnumber=6&search=search" class="d-flex flex-column">
-                            <img src="template/default/assets/images/6-blackboard.png" width="80" class="mb-3 mx-auto"/>
-                            Ilmu-ilmu Terapan                        </a>
-                    </li>
-                    <li class="d-flex justify-content-center align-items-center m-2">
-                        <a href="index.php?callnumber=7&search=search" class="d-flex flex-column">
-                            <img src="template/default/assets/images/7-quill.png" width="80" class="mb-3 mx-auto"/>
-                            Kesenian, Hiburan, dan Olahraga                        </a>
-                    </li>
-                    <li class="d-flex justify-content-center align-items-center m-2">
-                        <a href="index.php?callnumber=8&search=search" class="d-flex flex-column">
-                            <img src="template/default/assets/images/8-books.png" width="80" class="mb-3 mx-auto"/>
-                            Kesusastraan                        </a>
-                    </li>
-                    <li class="d-flex justify-content-center align-items-center m-2">
-                        <a href="index.php?callnumber=9&search=search" class="d-flex flex-column">
-                            <img src="template/default/assets/images/9-return-to-the-past.png" width="80" class="mb-3 mx-auto"/>
-                            Geografi dan Sejarah                        </a>
-                    </li>
-                </ul>
-            </div>
-            <div class="modal-footer text-muted text-sm">
-                <div>Icons made by <a href="http://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
-            </div>
-        </div>
-    </div>
-</div>
+{{--<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"--}}
+{{--     aria-hidden="true">--}}
+{{--    <div class="modal-dialog modal-lg" role="document">--}}
+{{--        <div class="modal-content">--}}
+{{--            <div class="modal-header">--}}
+{{--                <h5 class="modal-title" id="exampleModalLabel">Pilih subjek yang menarik bagi Anda</h5>--}}
+{{--                <button type="button" class="close" data-dismiss="modal" aria-label="Close">--}}
+{{--                    <span aria-hidden="true">&times;</span>--}}
+{{--                </button>--}}
+{{--            </div>--}}
+{{--            <div class="modal-body">--}}
+{{--                <ul class="topic d-flex flex-wrap justify-content-center p-0">--}}
+{{--                    <li class="d-flex justify-content-center align-items-center m-2">--}}
+{{--                        <a href="index.php?callnumber=0&search=search" class="d-flex flex-column">--}}
+{{--                            <img src="template/default/assets/images/0-chemical.png" width="80" class="mb-3 mx-auto"/>--}}
+{{--                            Karya Umum                        </a>--}}
+{{--                    </li>--}}
+{{--                    <li class="d-flex justify-content-center align-items-center m-2">--}}
+{{--                        <a href="index.php?callnumber=1&search=search" class="d-flex flex-column">--}}
+{{--                            <img src="template/default/assets/images/1-memory.png" width="80" class="mb-3 mx-auto"/>--}}
+{{--                            Filsafat                        </a>--}}
+{{--                    </li>--}}
+{{--                    <li class="d-flex justify-content-center align-items-center m-2">--}}
+{{--                        <a href="index.php?callnumber=2&search=search" class="d-flex flex-column">--}}
+{{--                            <img src="template/default/assets/images/2-mosque.png" width="80" class="mb-3 mx-auto"/>--}}
+{{--                            Agama                        </a>--}}
+{{--                    </li>--}}
+{{--                    <li class="d-flex justify-content-center align-items-center m-2">--}}
+{{--                        <a href="index.php?callnumber=3&search=search" class="d-flex flex-column">--}}
+{{--                            <img src="template/default/assets/images/3-diploma.png" width="80" class="mb-3 mx-auto"/>--}}
+{{--                            Ilmu-ilmu Sosial                        </a>--}}
+{{--                    </li>--}}
+{{--                    <li class="d-flex justify-content-center align-items-center m-2">--}}
+{{--                        <a href="index.php?callnumber=4&search=search" class="d-flex flex-column">--}}
+{{--                            <img src="template/default/assets/images/4-translation.png" width="80" class="mb-3 mx-auto"/>--}}
+{{--                            Bahasa                        </a>--}}
+{{--                    </li>--}}
+{{--                    <li class="d-flex justify-content-center align-items-center m-2">--}}
+{{--                        <a href="index.php?callnumber=5&search=search" class="d-flex flex-column">--}}
+{{--                            <img src="template/default/assets/images/5-math.png" width="80" class="mb-3 mx-auto"/>--}}
+{{--                            Ilmu-ilmu Murni                        </a>--}}
+{{--                    </li>--}}
+{{--                    <li class="d-flex justify-content-center align-items-center m-2">--}}
+{{--                        <a href="index.php?callnumber=6&search=search" class="d-flex flex-column">--}}
+{{--                            <img src="template/default/assets/images/6-blackboard.png" width="80" class="mb-3 mx-auto"/>--}}
+{{--                            Ilmu-ilmu Terapan                        </a>--}}
+{{--                    </li>--}}
+{{--                    <li class="d-flex justify-content-center align-items-center m-2">--}}
+{{--                        <a href="index.php?callnumber=7&search=search" class="d-flex flex-column">--}}
+{{--                            <img src="template/default/assets/images/7-quill.png" width="80" class="mb-3 mx-auto"/>--}}
+{{--                            Kesenian, Hiburan, dan Olahraga                        </a>--}}
+{{--                    </li>--}}
+{{--                    <li class="d-flex justify-content-center align-items-center m-2">--}}
+{{--                        <a href="index.php?callnumber=8&search=search" class="d-flex flex-column">--}}
+{{--                            <img src="template/default/assets/images/8-books.png" width="80" class="mb-3 mx-auto"/>--}}
+{{--                            Kesusastraan                        </a>--}}
+{{--                    </li>--}}
+{{--                    <li class="d-flex justify-content-center align-items-center m-2">--}}
+{{--                        <a href="index.php?callnumber=9&search=search" class="d-flex flex-column">--}}
+{{--                            <img src="template/default/assets/images/9-return-to-the-past.png" width="80" class="mb-3 mx-auto"/>--}}
+{{--                            Geografi dan Sejarah                        </a>--}}
+{{--                    </li>--}}
+{{--                </ul>--}}
+{{--            </div>--}}
+{{--            <div class="modal-footer text-muted text-sm">--}}
+{{--                <div>Icons made by <a href="http://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>--}}
+{{--            </div>--}}
+{{--        </div>--}}
+{{--    </div>--}}
+{{--</div>--}}
 
 {{--<div class="modal fade" id="adv-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"--}}
 {{--     aria-hidden="true">--}}
