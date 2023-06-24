@@ -8,6 +8,7 @@ use App\Http\Controllers\Pustakawan\KategoriController;
 use App\Http\Controllers\Pustakawan\PenerbitController;
 use App\Http\Controllers\Pustakawan\BukuController;
 use App\Http\Controllers\Pustakawan\MemberController;
+use App\Http\Controllers\HomeController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -19,11 +20,19 @@ use App\Http\Controllers\Pustakawan\MemberController;
 |
 */
 
-Route::get('/', function () {
-    return view('index');
-});
+//Route::get('/', function () {
+//    return view('index');
+//});
+Route::get('/', [HomeController::class, 'index'])->name('index');
+
+require __DIR__.'/auth.php';
 
 Route::middleware(['auth','checkRole:anggota'])->group(function () {
+    //Update Profile Anggota
+    Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
+    Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
+    Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
+    //Dashboard Anggota
     Route::get('/dashboard', [AnggotaController::class, 'dashboard'])->name('anggota.dashboard');
     Route::get('/anggota/home', [AnggotaController::class, 'home'])->name('anggota.home');
     Route::get('/anggota/buku', [AnggotaController::class,'buku'])->name('anggota.buku');
@@ -33,20 +42,9 @@ Route::middleware(['auth','checkRole:anggota'])->group(function () {
     //Riwayat Peminjaman Buku
     Route::get('anggota/detail', [AnggotaController::class,'detail'])->name('anggota.detail');
 });
+
 Route::middleware(['auth','checkRole:pustakawan'])->group(function () {
     Route::get('/pustakawan/dashboard', [PustakawanController::class, 'dashboard'])->name('pustakawan.dashboard');
-});
-
-require __DIR__.'/auth.php';
-
-Route::middleware(['auth','checkRole:anggota'])->group(function () {
-    //Update Profile Anggota
-    Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
-    Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
-    Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
-});
-
-Route::middleware(['auth','checkRole:pustakawan'])->group(function () {
     //Update Profile Pustakawan
     Route::get('/pustakawan/profile', [PustakawanController::class, 'edit'])->name('pustakawan.edit');
     Route::patch('/pustakawan/profile', [PustakawanController::class, 'update'])->name('pustakawan.update');

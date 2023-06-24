@@ -1,4 +1,4 @@
-@extends('layouts.argon')
+@extends('layouts.pustakawan')
 @section('content')
     @foreach($penerbit as $p)
     <form method="post" action="/pustakawan/penerbit/update" >
@@ -14,8 +14,8 @@
             <label for="example-text-input" class="form-control-label">Email</label>
             <input class="form-control" type="text" name="email" value="{{ $p->email }}" id="example-text-input">
         </div>
+        <br>
         <button type="submit" class="btn btn-primary btn-sm">Simpan</button>
-
     </form>
     @endforeach
 @endsection

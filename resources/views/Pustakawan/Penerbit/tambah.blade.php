@@ -1,4 +1,4 @@
-@extends('layouts.argon')
+@extends('layouts.pustakawan')
 @section('content')
     <form action="/pustakawan/penerbit/store" method="post">
         @csrf
@@ -12,6 +12,7 @@
             <label for="example-text-input" class="form-control-label">Email</label>
             <input class="form-control" type="text" name="email" id="example-text-input">
         </div>
+        <br>
         <button type="submit" class="btn btn-primary btn-sm">Simpan</button>
     </form>
 @endsection

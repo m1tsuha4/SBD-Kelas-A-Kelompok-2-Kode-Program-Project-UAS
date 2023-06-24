@@ -1,4 +1,4 @@
-@extends('layouts.argon')
+@extends('layouts.pustakawan')
 @section('content')
     @foreach($peminjaman as $p)
         <form action="/pustakawan/anggota/update" method="post">
@@ -16,6 +16,7 @@
                     <option value="Sudah Dikembalikan"{{ $p->status_pengembalian === 'Sudah Dikembalikan' ? ' selected' : '' }}>Sudah Dikembalikan</option>
                 </select>
             </div>
+            <br>
             <button type="submit" class="btn btn-primary btn-sm">Simpan</button>
         </form>
     @endforeach

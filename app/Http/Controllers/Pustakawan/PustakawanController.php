@@ -7,6 +7,7 @@ use App\Http\Requests\ProfileUpdateRequest;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Redirect;
 use Illuminate\View\View;
 use App\Models\Pustakawan;
@@ -15,7 +16,9 @@ class PustakawanController extends Controller
 {
     public function dashboard(): View
     {
-        return view('pustakawan.dashboard');
+        $idUser = Auth::id();
+        $pustakawan = DB::table('pustakawan')->where('user_id',$idUser)->get();
+        return view('pustakawan.dashboard',compact('pustakawan'));
     }
     /**
      * Display the user's profile form.

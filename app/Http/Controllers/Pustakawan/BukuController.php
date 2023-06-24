@@ -26,8 +26,6 @@ class BukuController extends Controller
             'judul'=>$request->judul,
             'penulis'=>$request->penulis,
             'tahun_terbit'=>$request->tahun_terbit,
-            'jumlah_stock'=>$request->jumlah_stock,
-            'jumlah_terpinjam'=>$request->jumlah_terpinjam,
             'id_pnb'=>$request->id_pnb,
             'id_kategori'=>$request->id_kategori,
         ]);
@@ -47,8 +45,6 @@ class BukuController extends Controller
             'judul'=>$request->judul,
             'penulis'=>$request->penulis,
             'tahun_terbit'=>$request->tahun_terbit,
-            'jumlah_stock'=>$request->jumlah_stock,
-            'jumlah_terpinjam'=>$request->jumlah_terpinjam,
             'id_pnb'=>$request->id_pnb,
             'id_kategori'=>$request->id_kategori,
         ]);

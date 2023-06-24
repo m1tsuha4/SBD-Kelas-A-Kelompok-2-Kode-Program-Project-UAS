@@ -17,8 +17,6 @@ return new class extends Migration
             $table->string('judul')->notNull();
             $table->string('penulis')->notNull();
             $table->integer('tahun_terbit')->notNull();
-            $table->integer('jumlah_stock')->notNull();
-            $table->integer('jumlah_terpinjam')->notNull();
             $table->unsignedBigInteger('id_pnb')->notNull();
             $table->foreignId('id_kategori')->references('id_kategori')->on('kategori')->onDelete('cascade');
             $table->timestamps();

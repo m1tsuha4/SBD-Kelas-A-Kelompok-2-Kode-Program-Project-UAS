@@ -1,4 +1,4 @@
-@extends('layouts.argon')
+@extends('layouts.pustakawan')
 @section('content')
     <form action="/pustakawan/buku/store" method="post">
         @csrf
@@ -11,10 +11,6 @@
             <input class="form-control" type="text" name="penulis" id="example-text-input">
             <label for="example-text-input" class="form-control-label">Tahun Terbit</label>
             <input class="form-control" type="text" name="tahun_terbit" id="example-text-input">
-            <label for="example-text-input" class="form-control-label">Jumlah Stock</label>
-            <input class="form-control" type="text" name="jumlah_stock" id="example-text-input">
-            <label for="example-text-input" class="form-control-label">Jumlah Terpinjam</label>
-            <input class="form-control" type="text" name="jumlah_terpinjam" id="example-text-input">
             <label for="id_pnb">Penerbit</label>
             <select id="id_pnb" name="id_pnb" class="form-control">
                 @foreach($penerbit as $p)
@@ -28,6 +24,7 @@
                 @endforeach
             </select>
         </div>
+        <br>
         <button type="submit" class="btn btn-primary btn-sm">Simpan</button>
     </form>
 @endsection
