@@ -17,8 +17,9 @@ class MemberController extends Controller
 //        $buku = DB::table('buku')->get();
         $peminjaman = DB::table('peminjaman')
             ->join('buku', 'peminjaman.kd_exmp', '=', 'buku.kd_exmp')
+            ->join('anggota', 'peminjaman.id_agt', '=', 'anggota.id')
             ->where('peminjaman.id_agt', $id)
-            ->select('peminjaman.*', 'buku.judul')
+            ->select('peminjaman.*', 'buku.judul','anggota.nama_anggota')
             ->get();
         return view('pustakawan.anggota.detail',['peminjaman'=>$peminjaman]);
     }

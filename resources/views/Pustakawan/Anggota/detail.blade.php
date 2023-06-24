@@ -5,6 +5,18 @@
             <div class="panel panel-default">
                 <div class="panel-heading">
                     <h4 style="margin: 0px;"><i class="fa fa-archive"></i> Daftar Peminjaman</h4>
+                    <br>
+                    @php
+                        $previousNamaAnggota = null;
+                    @endphp
+                    @foreach($peminjaman as $p)
+                        @if($previousNamaAnggota !== $p->nama_anggota)
+                            <h4><strong>{{ $p->nama_anggota }}</strong></h4>
+                            @php
+                                $previousNamaAnggota = $p->nama_anggota;
+                            @endphp
+                        @endif
+                    @endforeach
                 </div>
                 <div class="panel-body center" style="padding-bottom: 0px;">
 
